@@ -50,4 +50,5 @@ function renderChessboard() {
 generateChessboard()
 console.table(renderChessboard())
 console.log('sfrgerhyh')
+console.log(',e,e,ee,');
 module.exports = { generateChessboard, renderChessboard }
