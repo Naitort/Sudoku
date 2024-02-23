@@ -1,10 +1,22 @@
+const fs = require('fs')
+
 function read(n) {
+  let arrNum =[]
+const arr =fs.readFileSync('./puzzles.txt', 'utf-8').trim().split('\n')[n].split('')
+
+for (let i = 0; i < arr.length; i+=9) {
+  console.log(arr[i])
+arrNum.push(arr.slice(i, i+9))
+}
+return arrNum
+}
+console.log(read(3))
   /**
    * cсчитываем строчку через фску
    * сформировать массив 9х9
    * Прочесть файл puzzles.txt в кодировке 'utf-8' и вернуть эти данные из функции
    */
-}
+
 
 function solve(read) {
   /**
