@@ -34,7 +34,7 @@ function solve(read) {
     const readToStringVert = function readToStringVert(read) {
         let newArr = []
         for (let i = 0; i < read.length; i++) {
-            const newRead = read[i].map((el) => (el === '-' ? (el = 'f') : el))
+            const newRead = read[i].map((el) => (el === '-' ? (el = '0') : el))
 
             let newArrInside = []
             for (let j = 0; j < newRead.length; j++) {
@@ -42,23 +42,24 @@ function solve(read) {
             }
             newArr.push(newArrInside)
         }
-
         return newArr
     }
 
-    //   readToStringVert(read, 77)
-
     //находим каких цифр нет в строке
     const numbers = function doNumbers() {
-        const numbers = ['f', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
         const str = arr.join('').replaceAll('-', '')
         const newArr = []
         numbers.forEach((el) => !str.includes(el) && newArr.push(el))
         return newArr
     }
 
+    console.log(readToStringVert(read))
+
     // есть массив строк и столбцов, нужно сравнивать и подставлять для теста
 }
+
+//console.log(solve(read(3)))
 
 /**
  * проходит по массиву решает и доставляет цифры
