@@ -20,7 +20,7 @@ function generateChessboard() {
     board.push(pawns.map((el) => `Б ${el}`))
     board.push(figures.map((el) => `Б ${el}`))
     return board
-    console.log(board);
+    console.log(board)
 }
 
 console.log(generateChessboard)
@@ -49,4 +49,5 @@ function renderChessboard() {
 }
 generateChessboard()
 console.table(renderChessboard())
+console.log('sfrgerhyh')
 module.exports = { generateChessboard, renderChessboard }
